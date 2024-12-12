@@ -2,6 +2,7 @@ const proxy_url = "https://corsproxy.io/?";
 const api_url = "https://zenquotes.io/api/quotes/";
 let quotesCache = [];
 let currentQuoteIndex = 0;
+const button = document.getElementById("button");
 
 async function fetchQuotes() {
     try {
@@ -14,6 +15,7 @@ async function fetchQuotes() {
         // Parse the response as JSON
         const data = JSON.parse(textData);
         quotesCache = data;
+        console.log("Quotes Cache:", quotesCache);
         currentQuoteIndex = 0;
         displayQuote();
     } catch (error) {
@@ -31,6 +33,11 @@ function displayQuote() {
         document.getElementsByClassName("quote")[0].innerText = "No Quotes available.";
     }
 }
+
+button.addEventListener("click", () => {
+    displayQuote();
+}
+)
 
 fetchQuotes();
 
