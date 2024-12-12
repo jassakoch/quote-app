@@ -1,0 +1,62 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: "Charm", serif;
+    margin: 40px;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 106, 121, 1) 0%, rgba(167, 46, 149, 1) 92%);
+
+}
+
+.charm-regular {
+    font-family: "Charm", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.charm-bold {
+    font-family: "Charm", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.quote-mark {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.quote {
+    font-size: 1.5rem;
+    line-height: 1.6 rem;
+
+}
+
+button {
+    width: 200px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color: #388E3C;
+    border-radius: 25px;
+    position: center;
+}
+
+button:hover {
+    transform: scale(1.05);
+
+}
+
+@media(min-width: 768px) {
+    .container {
+        margin-left: 350px;
+        margin-right: 350px;
+        width: 300px;
+    }
+}
