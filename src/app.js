@@ -43,10 +43,9 @@ function displayQuote() {
 
 function changeBackground() {
   
-        currentGradientIndex = (currentGradientIndex + 1) % gradients.length;
-
-        document.body.style.background = gradients[currentGradientIndex];
-    
+  document.body.style.animation = 'none';
+  void document.body.offsetWidth;
+  document.body.style.animation = 'gradient 15s ease';
 }
     button.addEventListener("click", () => {
         displayQuote();
