@@ -4,12 +4,6 @@ let quotesCache = [];
 let currentQuoteIndex = 0;
 const button = document.getElementById("button");
 
-const gradients = [
-
-    "linear-gradient(90deg, rgba(9,106,121,1) 0%, rgba(167,46,149,1) 100%, rgba(167,46,149,1) 100%)",
-    "linear-gradient(90deg, rgba(167,167,46,1) 62%, rgba(167,46,149,1) 100%, rgba(167,46,149,1) 100%)"
-]
-let currentGradientIndex = 0;
 
 async function fetchQuotes() {
     try {
@@ -42,18 +36,17 @@ function displayQuote() {
 }
 
 function changeBackground() {
-  
-  document.body.style.animation = 'none';
-  void document.body.offsetWidth;
-  document.body.style.animation = 'gradient 15s ease';
+
+    document.body.style.animation = 'none';
+    void document.body.offsetWidth;
+    document.body.style.animation = 'gradient 15s ease';
 }
-    button.addEventListener("click", () => {
-        displayQuote();
-        changeBackground();
+button.addEventListener("click", () => {
+    displayQuote();
+    changeBackground();
 
-    }
-    )
-
+}
+)
 
 fetchQuotes();
 
